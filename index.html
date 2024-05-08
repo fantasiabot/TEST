@@ -1,0 +1,21 @@
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    /* using flex box to center video */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+
+<video src="videos/screen-saver.mp4" autoplay="true" loop="true"></video>
+
+<script>
+  // audio and video tracks can't start playing until
+  // the viewer has interacted with the page.
+  // the JavaScript code below plays the video element 
+  // if the viewer clicks anywhere on the page.
+  const vid = document.querySelector('video')
+  document.body.addEventListener('click', () => vid.play())
+</script>
